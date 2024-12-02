@@ -3,29 +3,44 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DeKoelkast.Pages.MainMenuPage"
              Title="Hoofdmenu">
-    <StackLayout Padding="20">
-        <Label Text="Welkom bij het hoodfmenu!"
+    <Grid Padding="20" RowSpacing="10" ColumnSpacing="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label Text="Welkom bij het hoofdmenu!"
                FontSize="24"
-               HorizontalOptions="Center" />
+               HorizontalOptions="Center"
+               Grid.Row="0"
+               Grid.ColumnSpan="2" />
+
         <Button Text="Drankje pakken"
                 HorizontalOptions="FillAndExpand"
-                WidthRequest="250"
-                Margin="0,20,0,0" 
-                Clicked="OnDrinkButtonClicked"/>
+                Grid.Row="1"
+                Grid.Column="0"
+                Clicked="OnDrinkButtonClicked" />
         <Button Text="Drank toevoegen aan koelkast"
                 HorizontalOptions="FillAndExpand"
-                WidthRequest="250"
-                Margin="0,10,0,0" 
-                Clicked="OnAddDrinkButtonClicked"/>
+                Grid.Row="1"
+                Grid.Column="1"
+                Clicked="OnAddDrinkButtonClicked" />
         <Button Text="Afrekenen"
                 HorizontalOptions="FillAndExpand"
-                WidthRequest="250"
-                Margin="0,10,0,0"
-                Clicked="OnCheckoutButtonClicked"/>
+                Grid.Row="2"
+                Grid.Column="0"
+                Clicked="OnCheckoutButtonClicked" />
         <Button Text="Uitloggen"
                 HorizontalOptions="FillAndExpand"
-                WidthRequest="250"
-                Margin="0,10,0,0"
-                Clicked="OnLogoutButtonClicked"/>
-    </StackLayout>
+                Grid.Row="2"
+                Grid.Column="1"
+                Clicked="OnLogoutButtonClicked" />
+    </Grid>
 </ContentPage>
