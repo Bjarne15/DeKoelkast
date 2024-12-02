@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DeKoelkast.StartMenuPage"
+             Title="StartMenuPage">
+    <StackLayout Padding="20" Spacing="15">
+        <Label Text="Welkom bij het Start menu" HorizontalOptions="Center"/>
+        <Label Text="Om andere pagina's te openen, open de flyout rechts boven." HorizontalOptions="Center" />
+        <Label Text="Deze app is alleen voor het testen van een Flyout pagina." HorizontalOptions="Center" />
+        <Button Text="Deze knop heeft geen functie en dient alleen ter demonstratie."
+        LineBreakMode="WordWrap"
+        WidthRequest="350"
+        HeightRequest="100" />
+    </StackLayout>
+</ContentPage>
