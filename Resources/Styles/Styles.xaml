@@ -9,9 +9,9 @@
     <Color x:Key="SecondaryColor">#27ff00</Color>
     <Color x:Key="TextcolorLight">#000000</Color>
     <Color x:Key="TextcolorDark">#FFFFFF</Color>
-    <Color x:Key="BackgroundColorDark">#595959</Color>
+    <Color x:Key="BackgroundColorDark">#000000</Color>
     <Color x:Key="BackgroundColorLight">#FFFFFF</Color>
-    <Color x:Key="BackgroundButtons">#00c1ff</Color>
+    <Color x:Key="BackgroundButtons">#5F9EA0</Color>
 
 
     <Style TargetType="ActivityIndicator">
@@ -386,7 +386,7 @@
 
     <Style TargetType="Page" ApplyToDerivedTypes="True">
         <Setter Property="Padding" Value="0"/>
-        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource OffBlack}}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource BackgroundColorLight}, Dark={StaticResource BackgroundColorDark}}" />
     </Style>
 
     <Style TargetType="Shell" ApplyToDerivedTypes="True">
