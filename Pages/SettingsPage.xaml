@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DeKoelkast.Pages.SettingsPage"
+             Title="SettingsPage">
+    <StackLayout Padding="20" Spacing="15">
+        <Label Text="Welkom bij de instellingen van je profiel." 
+               FontSize="Large" 
+               HorizontalOptions="Center" />
+
+        <Button Text="Werk de gegevens van jouw profiel bij."
+                FontSize="Medium"
+                HorizontalOptions="Center" />
+        <Button Text="Verwijder jouw profiel."
+                FontSize="Medium"
+                HorizontalOptions="Center" />
+
+    </StackLayout>
+</ContentPage>
