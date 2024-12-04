@@ -1,13 +1,38 @@
+using DeKoelkast.DAL;
+
 namespace DeKoelkast.Pages;
 
 public partial class LoginPage : ContentPage
 {
-	public LoginPage()
-	{
-		InitializeComponent();
-	}
-    private async void OnLoginButtonClicked(object sender, EventArgs e)
+    private readonly UserRepository _userRepository;
+
+    public LoginPage()
     {
-        await Navigation.PushAsync(new MainMenuPage());
+        InitializeComponent();
+        _userRepository = new UserRepository();
+    }
+
+    private async void OnLoginClicked(object sender, EventArgs e)
+    {
+        string username = UsernameEntry.Text;
+        string password = PasswordEntry.Text;
+
+        if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
+        {
+            await DisplayAlert("Fout", "Gebruikersnaam en wachtwoord zijn verplicht!", "OK");
+            return;
+        }
+
+        // Inloggegevens verifiëren
+        bool isValid = await _userRepository.VerifyLoginAsync(username, password);
+        if (isValid)
+        {
+            await DisplayAlert("Succes", "Inloggen geslaagd!", "OK");
+            // Navigeren naar volgende pagina
+        }
+        else
+        {
+            await DisplayAlert("Fout", "Onjuiste inloggegevens!", "OK");
+        }
     }
 }
