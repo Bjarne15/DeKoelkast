@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DeKoelkast.Pages.PaymentPage"
+             Title="Betaalmethode">
+    <StackLayout Padding="20">
+        <Label Text="Kies een betaaloptie:"
+               FontSize="18"
+               HorizontalOptions="Center"
+               Margin="0,20,0,20" />
+        <Button Text="iDEAL"
+                HorizontalOptions="FillAndExpand"
+                WidthRequest="250"
+                Margin="0,10,0,0"
+                Clicked="OnPaymentOptionClicked" />
+        <Button Text="Paypal"
+                HorizontalOptions="FillAndExpand"
+                WidthRequest="250"
+                Margin="0,10,0,0"
+                Clicked="OnPaymentOptionClicked" />
+        <Button Text="Creditcard"
+                HorizontalOptions="FillAndExpand"
+                WidthRequest="250"
+                Margin="0,10,0,0"
+                Clicked="OnPaymentOptionClicked" />
+        <Button Text="Bankoverschrijving"
+                HorizontalOptions="FillAndExpand"
+                WidthRequest="250"
+                Margin="0,10,0,0"
+                Clicked="OnPaymentOptionClicked" />
+    </StackLayout>
+</ContentPage>

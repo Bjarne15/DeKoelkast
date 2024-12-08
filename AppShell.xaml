@@ -5,11 +5,13 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:DeKoelkast"
     Shell.FlyoutBehavior="Disabled"
+    BackgroundColor="#000000"
+    TitleColor="CadetBlue"
     Title="DeKoelkast">
 
     <ShellContent
         Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
+        ContentTemplate="{DataTemplate local:StartMenuPage}"
         Route="MainPage" />
 
 </Shell>
