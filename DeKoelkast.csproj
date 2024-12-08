@@ -74,4 +74,9 @@
 	  </MauiXaml>
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Folder Include="DAL\" />
+	  <Folder Include="Models\" />
+	</ItemGroup>
+
 </Project>
