@@ -1,12 +1,17 @@
-
 namespace DeKoelkast.Pages;
+using DeKoelkast.Helpers;
 
 public partial class MainMenuPage : ContentPage
 {
-	public MainMenuPage()
-	{
-		InitializeComponent();
-	}
+    public MainMenuPage()
+    {
+        InitializeComponent();
+        if (AppState.SelectedFridge != null)
+        {
+            var fridge = AppState.SelectedFridge;
+            DisplayAlert("Gekozen Koelkast", $"Je hebt {fridge.Name} gekozen.", "OK");
+        }
+    }
     private async void OnDrinkButtonClicked(object sender, EventArgs e)
     {
         await Navigation.PushAsync(new DrinksPage());

@@ -3,40 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DeKoelkast.Pages.DrinksPage"
              Title="Drankjes pagina">
-    <StackLayout Padding="20">
-        <Label Text="Drankjes keuze"
-               FontSize="18"
-               HorizontalOptions="Center"
-               Margin="0,20,0,20" />
-        <Button Text="Cola"
-                HorizontalOptions="FillAndExpand"
-                WidthRequest="250"
-                Margin="0,10,0,0"
-                Clicked="OnDrinkButtonClicked" />
-        <Button Text="Sprite"
-                HorizontalOptions="FillAndExpand"
-                WidthRequest="250"
-                Margin="0,10,0,0"
-                Clicked="OnDrinkButtonClicked" />
-        <Button Text="Fanta"
-                HorizontalOptions="FillAndExpand"
-                WidthRequest="250"
-                Margin="0,10,0,0"
-                Clicked="OnDrinkButtonClicked" />
-        <Button Text="Red Bull"
-                HorizontalOptions="FillAndExpand"
-                WidthRequest="250"
-                Margin="0,10,0,0"
-                Clicked="OnDrinkButtonClicked" />
-        <Button Text="Monster"
-                HorizontalOptions="FillAndExpand"
-                WidthRequest="250"
-                Margin="0,10,0,0"
-                Clicked="OnDrinkButtonClicked" />
-        <Button Text="Bier"
-                HorizontalOptions="FillAndExpand"
-                WidthRequest="250"
-                Margin="0,10,0,0"
-                Clicked="OnDrinkButtonClicked" />
-    </StackLayout>
+    <VerticalStackLayout Padding="20">
+        <CollectionView ItemsSource="{Binding Drinks}" SelectionMode="Single" SelectionChanged="OnDrinkSelected">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Padding="10" Margin="5" BorderColor="Gray">
+                        <Label Text="{Binding Key}" FontSize="18"/>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
 </ContentPage>

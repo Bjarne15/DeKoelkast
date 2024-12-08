@@ -3,17 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DeKoelkast.Pages.SettingsPage"
              Title="SettingsPage">
-    <StackLayout Padding="20" Spacing="15">
-        <Label Text="Welkom bij de instellingen van je profiel." 
-               FontSize="Large" 
-               HorizontalOptions="Center" />
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+            <!-- Er moet moeten nog de gegevens van de ingelogde gebruiker getoond worden.-->
 
-        <Button Text="Werk de gegevens van jouw profiel bij."
-                FontSize="Medium"
-                HorizontalOptions="Center" />
-        <Button Text="Verwijder jouw profiel."
-                FontSize="Medium"
-                HorizontalOptions="Center" />
+            <Button Text="Profiel bijwerken" BackgroundColor="#5F9EA0" TextColor="Black" />
+            <Button Text="Profiel verwijderen" BackgroundColor="#5F9EA0" TextColor="Black" />
 
-    </StackLayout>
+            <Button Text="Uitloggen" BackgroundColor="#5F9EA0" TextColor="Black" Clicked="OnLogoutClicked" />
+            <Button Text="Terug naar koelkast keuze" Clicked="OnBackToFridgeSelectionClicked" />
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

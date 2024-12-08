@@ -1,4 +1,6 @@
-﻿namespace DeKoelkast
+﻿using DeKoelkast;
+
+namespace DeKoelkast
 {
     public partial class AppShell : Shell
     {

@@ -2,14 +2,17 @@ namespace DeKoelkast.Pages;
 
 public partial class DrinkAddedConfirmationPage : ContentPage
 {
-    public DrinkAddedConfirmationPage(string drinkName, string drinkPrice, string drinkQuantity)
+    public string Message { get; set; }
+
+    public DrinkAddedConfirmationPage(string message)
     {
         InitializeComponent();
-        ConfirmationLabel.Text = $"{drinkQuantity} flessen {drinkName} met prijs {drinkPrice}€ werd toegevoegd.";
+        Message = message;
+        BindingContext = this;
     }
 
-    private async void OnOkButtonClicked(object sender, EventArgs e)
+    private void OnOkClicked(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new MainMenuPage());
+        Navigation.PopToRootAsync(); // Keer terug naar MainMenuPage
     }
 }
