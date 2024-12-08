@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DeKoelkast.Pages.MainMenuPage"
+             Title="Hoofdmenu">
+    <Grid Padding="20" RowSpacing="10" ColumnSpacing="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label Text="Welkom bij het hoofdmenu!"
+               FontSize="24"
+               HorizontalOptions="Center"
+               Grid.Row="0"
+               Grid.ColumnSpan="2" />
+
+        <Button Text="Drankje pakken"
+                HorizontalOptions="FillAndExpand"
+                Grid.Row="1"
+                Grid.Column="0"
+                Clicked="OnDrinkButtonClicked" />
+        <Button Text="Drank toevoegen aan koelkast"
+                HorizontalOptions="FillAndExpand"
+                Grid.Row="1"
+                Grid.Column="1"
+                Clicked="OnAddDrinkButtonClicked" />
+        <Button Text="Afrekenen"
+                HorizontalOptions="FillAndExpand"
+                Grid.Row="2"
+                Grid.Column="0"
+                Clicked="OnCheckoutButtonClicked" />
+        <Button Text="Uitloggen"
+                HorizontalOptions="FillAndExpand"
+                Grid.Row="2"
+                Grid.Column="1"
+                Clicked="OnLogoutButtonClicked" />
+    </Grid>
+</ContentPage>

@@ -4,22 +4,14 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:DeKoelkast"
-    Shell.FlyoutBehavior="Flyout"
+    Shell.FlyoutBehavior="Disabled"
+    BackgroundColor="#000000"
+    TitleColor="CadetBlue"
     Title="DeKoelkast">
 
     <ShellContent
-        Title="Start Menu"
-        ContentTemplate="{DataTemplate local:StartMenuPage}"
-        Route="StartMenu" />
-
-    <ShellContent
         Title="Home"
-        ContentTemplate="{DataTemplate local:HomeMenuPage}"
-        Route="HomeMenu" />
-
-    <ShellContent
-        Title="Settings"
-        ContentTemplate="{DataTemplate local:SettingsPage}"
-        Route="SettingsPage" />
+        ContentTemplate="{DataTemplate local:StartMenuPage}"
+        Route="MainPage" />
 
 </Shell>

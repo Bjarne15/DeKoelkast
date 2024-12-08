@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DeKoelkast.Pages.DrinksPage"
+             Title="Drankjes pagina">
+    <VerticalStackLayout Padding="20">
+        <CollectionView ItemsSource="{Binding Drinks}" SelectionMode="Single" SelectionChanged="OnDrinkSelected">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Padding="10" Margin="5" BorderColor="Gray">
+                        <Label Text="{Binding Key}" FontSize="18"/>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentPage>
