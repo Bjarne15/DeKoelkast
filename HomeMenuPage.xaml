@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DeKoelkast.HomeMenuPage"
+             Title="HomeMenuPage">
+    <StackLayout Padding="20" Spacing="15">
+        <Label Text="Welkom bij het hoofdmenu!" HorizontalOptions="Center" />
+        <Button Text="Deze knop doet niks.." />
+    </StackLayout>
+</ContentPage>
