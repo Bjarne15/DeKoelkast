@@ -1,4 +1,4 @@
-using DeKoelkast.Data;
+
 
 namespace DeKoelkast.Pages
 {
@@ -7,7 +7,6 @@ namespace DeKoelkast.Pages
         public InventoryPage()
         {
             InitializeComponent();
-            inventoryListView.ItemsSource = FridgeManager.SelectedFridge.Inventory;
         }
     }
 }

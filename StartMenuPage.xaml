@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DeKoelkast.StartMenuPage"
              Title="Start Menu">
-    <StackLayout Padding="20">
+    <StackLayout Padding="20" Spacing="20">
         
         <Label Text="Welkom bij de koelkast app!"
                FontSize="18"
