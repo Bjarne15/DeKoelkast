@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using DeKoelkast.Helpers;
+using Microsoft.Extensions.Logging;
+using SQLite;
 
 namespace DeKoelkast
 {
@@ -15,11 +17,22 @@ namespace DeKoelkast
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
+            InitializeDatabase();
+
 #if DEBUG
-    		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
 
             return builder.Build();
+        }
+
+        private static async void InitializeDatabase()
+        {
+            string databaseName = "DeKoelkast.db";
+            string dbPath = await DatabaseInitializer.InitializeDatabaseAsync(databaseName);
+
+            // Test of het pad correct is
+            Console.WriteLine($"Database pad: {dbPath}");
         }
     }
 }

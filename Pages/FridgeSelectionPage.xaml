@@ -3,9 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DeKoelkast.Pages.FridgeSelectionPage"
              Title="FridgeSelectionPage">
-    <StackLayout Padding="20" Spacing="15">
-        <Label Text="Kies hier een koelkast waar je van wilt drinken."
-               FontSize="Large"
-               HorizontalOptions="Center" />
-    </StackLayout>
+    <VerticalStackLayout>
+        <Label Text="Kies een koelkast waarvan je wilt drinken." FontSize="Large" HorizontalOptions="Center" ></Label>
+        <ListView ItemsSource="{Binding Fridges}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Name}" Detail="{Binding Location}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </VerticalStackLayout>
 </ContentPage>
